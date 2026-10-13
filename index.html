@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#087f5b">
+<title>فزعة | FAZAA</title>
+<style>
+:root{--green:#087f5b;--deep:#07533f;--cream:#f5f8f5;--ink:#18352d;--muted:#63766f;--line:#e0e9e3}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;background:var(--cream);color:var(--ink)}
+header{background:linear-gradient(135deg,var(--deep),var(--green));color:white;padding:24px 18px 28px;border-radius:0 0 26px 26px}
+.wrap{max-width:900px;margin:auto}nav{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-size:24px;font-weight:800;letter-spacing:.3px}.badge{border:1px solid #ffffff70;border-radius:20px;padding:6px 10px;font-size:12px}
+h1{font-size:28px;margin:30px 0 8px}header p{margin:0;line-height:1.8;color:#e1f5ec}.search{display:flex;gap:8px;margin-top:20px}.search input{flex:1;min-width:0;border:0;border-radius:12px;padding:14px;font-size:15px}.search button,.primary{background:#f5c451;color:#26351b;border:0;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer}
+main{padding:22px 16px 40px}.section-head{display:flex;justify-content:space-between;align-items:center;margin:10px 0 14px}.section-head h2{font-size:20px;margin:0}.hint{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{background:white;border:1px solid var(--line);border-radius:17px;padding:17px;box-shadow:0 4px 14px #163b2b08}.icon{font-size:26px}.card h3{margin:9px 0 5px;font-size:17px}.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.panel{margin-top:22px;background:white;border:1px solid var(--line);border-radius:18px;padding:18px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.actions button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:10px 12px;cursor:pointer;color:var(--ink)}.feed{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.8}.feed:last-child{border:0}.feed strong{display:block}.tag{display:inline-block;background:#e5f5ed;color:#086648;border-radius:20px;padding:4px 9px;font-size:12px;margin-top:8px}
+footer{text-align:center;padding:22px;color:var(--muted);font-size:12px}
+@media(min-width:650px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}h1{font-size:36px}}
+@media(max-width:360px){.grid{grid-template-columns:1fr}.search button{padding:10px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<nav><div class="brand">🟢 فزعة <span style="font-weight:500;font-size:15px">FAZAA</span></div><span class="badge">نسخة تجريبية</span></nav>
+<h1>فزعة أهل الفزعة 🤝</h1>
+<p>مجتمع يجمع الناس، ودليل يساعدك تلاقي الخدمات حولك — كلّه في مكان واحد.</p>
+<form class="search" id="searchForm"><input id="searchInput" placeholder="ابحث عن خدمة أو موضوع..." aria-label="ابحث"><button>ابحث</button></form>
+</div></header>
+<main class="wrap">
+<div class="section-head"><h2>استكشف فزعة</h2><span class="hint">وش تحتاج اليوم؟</span></div>
+<div class="grid">
+<article class="card"><div class="icon">👥</div><h3>المجتمع</h3><p>شارك فكرة أو سؤال وتواصل مع المجتمع.</p><span class="tag">قريبًا</span></article>
+<article class="card"><div class="icon">🛠️</div><h3>دليل الخدمات</h3><p>اكتشف خدمات ومهن ومساعدات متنوعة.</p><span class="tag">قريبًا</span></article>
+<article class="card"><div class="icon">🤖</div><h3>المساعد الذكي</h3><p>مساعد تجريبي يوجّهك للقسم المناسب.</p><span class="tag">تجريبي</span></article>
+<article class="card"><div class="icon">🌍</div><h3>فزعة حول العالم</h3><p>فكرة مجتمع مفتوح للناس من كل الدول.</p><span class="tag">الرؤية</span></article>
+</div>
+<section class="panel"><div class="section-head"><h2>💬 مساحة المجتمع</h2><span class="hint">عرض تجريبي</span></div>
+<div class="feed"><strong>أهلًا بك في فزعة!</strong>هنا تبدأ مساحة تجمع الأسئلة والأفكار والمساعدة بين الناس.</div>
+<div class="feed"><strong>وش تتمنى تشوف في فزعة؟</strong>اقترح خدمة أو ميزة تحب نضيفها في النسخ القادمة.</div>
+<div class="actions"><button id="ideaBtn">💡 اقترح فكرة</button><button id="helpBtn">🤝 كيف أستخدم فزعة؟</button></div>
+</section>
+<section class="panel" id="assistant"><div class="section-head"><h2>🤖 مساعد فزعة التجريبي</h2></div><p id="answer" style="line-height:1.9;color:var(--muted)">هلا بك! اختر أحد الخيارات عشان أوجّهك.</p><div class="actions"><button data-answer="تقدر تبدأ من قسم دليل الخدمات وتحدد نوع الخدمة التي تبحث عنها.">أبحث عن خدمة</button><button data-answer="شارك سؤالك أو فكرتك في مساحة المجتمع. هذه النسخة للعرض فقط ولا تنشر بياناتك على الإنترنت.">أبغى أشارك فكرة</button><button data-answer="هذه نسخة أولية للتجربة. تسجيل الحسابات ونشر المحتوى الحقيقي يحتاجان تطويرًا إضافيًا.">كيف أسجّل؟</button></div></section>
+</main>
+<footer>فزعة | FAZAA — نموذج أولي تجريبي، وليس خدمة مكتملة بعد.</footer>
+<script>
+document.getElementById('searchForm').addEventListener('submit',e=>{e.preventDefault();const q=document.getElementById('searchInput').value.trim();document.getElementById('answer').textContent=q?`بحث تجريبي عن «${q}»: ستتوفر نتائج البحث عند تطوير الدليل.`:'اكتب كلمة للبحث أولًا.';document.getElementById('assistant').scrollIntoView({behavior:'smooth',block:'center'});});
+document.querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>document.getElementById('answer').textContent=b.dataset.answer));
+document.getElementById('ideaBtn').addEventListener('click',()=>{document.getElementById('answer').textContent='فكرتك تهمنا! دوّنها عندك لنضيفها إلى خطة تطوير فزعة. هذه النسخة لا تحفظ المشاركات.';document.getElementById('assistant').scrollIntoView({behavior:'smooth',block:'center'});});
+document.getElementById('helpBtn').addEventListener('click',()=>{document.getElementById('answer').textContent='اختر قسمًا من الأقسام بالأعلى. هذه نسخة عرض أولية، وبعض المزايا ستُفعّل لاحقًا.';document.getElementById('assistant').scrollIntoView({behavior:'smooth',block:'center'});});
+</script>
+</body></html>
